@@ -1,7 +1,3 @@
-var x = document.getElementById("loading");
- 
-
-
 function renderHtml(spaceData){
     return (
         spaceData.map(station => {
@@ -25,29 +21,31 @@ function renderHtml(spaceData){
 
 }
 document.addEventListener("DOMContentLoaded", function() {
-    x.style.display = "block";
+    const loaderText = document.getElementById("loading");
+    loaderText.style.display = "block";
     // Your code to run since DOM is loaded and ready
     fetch("https://api.spaceXdata.com/v3/launches?limit=100")
         .then(res => res.json())
         .then(spaceData => {
-            x.style.display = "none";
+            loaderText.style.display = "none";
             renderHtml(spaceData)
          });
 });
 
 
 function filterByLaunchYear(launchYear = '', launchSuccess = ''){
+    const loaderText = document.getElementById("loading");
     const params = new URLSearchParams({
         launch_year: launchYear,
         launch_success: launchSuccess,
       });
     const rocketLaunches = document.getElementById('rocketLaunches');
     rocketLaunches.innerHTML = "";
-    x.style.display = "block";
+    loaderText.style.display = "block";
     fetch(`https://api.spaceXdata.com/v3/launches?limit=100&${params}`)
     .then(res => res.json())
     .then(spaceData => {
-        x.style.display = "none";
+        loaderText.style.display = "none";
         renderHtml(spaceData)
      });
 }

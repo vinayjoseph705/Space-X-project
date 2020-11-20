@@ -100,11 +100,7 @@ aside{
     border-radius: 7px;
 
   }
-  .display-flex{
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-}
+ 
 .flex-1{
     flex: 0 0 15%;
 }
@@ -128,9 +124,7 @@ ul li {
 .mb-0{
     margin-bottom: 0;
 }
-.mr-20{
-    margin-right: 20px;
-}
+
 ul{
     padding-left: 0;
 }
@@ -138,25 +132,72 @@ ul{
     background: #7cba01;
 }
 
-  /* On screens that are 992px wide or less, go from four columns to two columns */
-  @media screen and (max-width: 992px) {
-    .column {
-      flex: 50%;
-    }
-  }
-  
-  /* On screens that are 600px wide or less, make the columns stack on top of each other instead of next to each other */
-  @media screen and (max-width: 600px) {
-    .contain-row {
-      flex-direction: column;
-    }
-  }
 
-  /* @media(min-width: 1025px) and (max-width: 1360){
-      .column img{
-          width: 206px;
-      }
-  } */
+  
+@media (min-width: 700px)  {
+    .flex-1{
+        flex: 0 0 28%;
+    }
+    .display-flex{
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+    }
+    .mr-20{
+        margin-right: 20px;
+    }
+   }
+ 
+
+   @media (min-width: 1024px) {
+    .flex-1{
+        flex: 0 0 21%;
+    }
+    .column{
+        flex: 15%;
+        max-width: 220px;
+    }
+   }
+   @media (min-width: 1100px) {
+    .flex-1{
+        flex: 0 0 20%;
+    }
+    
+   }
+   @media (min-width: 1200px) {
+    .flex-1{
+        flex: 0 0 16%;
+    }
+    
+   }
+
+@media(max-width: 699px){
+    .column{
+        flex: 100%;
+        margin: 20px 0 0 0;
+
+    }
+    .flex-1{
+        flex: 100%;
+    }
+    aside{
+        width: 93%;
+        margin-bottom: 20px;
+    }
+    body{
+        padding: 55px;
+    }
+}
+  
+
+   
+
+
+
+  
+ 
+
+   
  
  
  
