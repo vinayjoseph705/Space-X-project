@@ -37,7 +37,11 @@ aside{
 }
 .button-section{
     display: flex;
+    display: -webkit-box;
+    display: -ms-flexbox;
     justify-content: space-between;
+    -webkit-box-pack: justify!important;
+    -ms-flex-pack: justify!important;
     width: 88%;
     margin: 0 auto;
     margin-bottom: 18px;
@@ -81,7 +85,10 @@ aside{
   } */
   .contain-row {
     display: flex;
+    display: -webkit-box;
+    display: -ms-flexbox;
     flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
   }
   
   .center{
