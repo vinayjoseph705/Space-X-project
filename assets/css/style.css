@@ -168,7 +168,7 @@ ul{
     }
     .column{
         flex: 15%;
-        -ms-flex:  0 0 15%;
+        -ms-flex:  15%;
         max-width: 220px;
     }
    }
